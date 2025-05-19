@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468809539663",
+    "project_id": "mini-chat-app-d5c27",
+    "storage_bucket": "mini-chat-app-d5c27.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468809539663:android:bdabc87ab0435e08758a3a",
+        "android_client_info": {
+          "package_name": "teamcosmo.minichat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBme-JH-wxCB2Fck88nMZsfFhBfyeq4FAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
