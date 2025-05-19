@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:minichatapp/core/models/response_state.dart';
 
+import '../models/response_state.dart';
 import '../utils/print_log.dart';
 
-class GoogleSignInUseCase {
+class GoogleSignInService {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   Future<ResponseState> signInGoogle() async {
@@ -33,6 +33,16 @@ class GoogleSignInUseCase {
       printLog('signInGoogle error: $e, stacktrace: $s', isError: true);
       return ResponseState(error: "Unknown error");
     }
+  }
+
+  Future<bool> isLoggedIn() async {
+    final bool isSignedIn = await _googleSignIn.isSignedIn();
+    return isSignedIn;
+  }
+
+  Future<User?> getLoggedInAccount() async {
+    final user = FirebaseAuth.instance.currentUser;
+    return user;
   }
 
   Future<void> logout() async {
