@@ -37,13 +37,6 @@
             {
               "client_id": "468809539663-7bmk989va61faihln3kkh889ta3kv351.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "468809539663-2sgkjgr9ifngntq5lai0cvilb2529p1j.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "teamcosmo.minichat"
-              }
             }
           ]
         }
