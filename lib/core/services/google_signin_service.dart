@@ -40,7 +40,7 @@ class GoogleSignInService {
     return isSignedIn;
   }
 
-  Future<User?> getLoggedInAccount() async {
+  User? getLoggedInAccount() {
     final user = FirebaseAuth.instance.currentUser;
     return user;
   }
