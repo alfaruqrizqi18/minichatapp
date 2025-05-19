@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hive_ce/hive.dart';
 
 import '../core/models/app_model.dart';

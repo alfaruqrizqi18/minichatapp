@@ -5,9 +5,11 @@ nextTypeId: 1
 types:
   AppModel:
     typeId: 0
-    nextIndex: 2
+    nextIndex: 3
     fields:
       isDarkMode:
         index: 0
       isLoggedIn:
         index: 1
+      currentUser:
+        index: 2
