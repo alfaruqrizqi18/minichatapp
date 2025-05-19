@@ -1,0 +1,30 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "mini-chat-app-d5c27",
+                    "appId": "1:468809539663:android:bdabc87ab0435e08758a3a",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "mini-chat-app-d5c27",
+                    "appId": "1:468809539663:ios:9856c25fbdb7a468758a3a",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "mini-chat-app-d5c27",
+                    "configurations": {
+                        "android": "1:468809539663:android:bdabc87ab0435e08758a3a",
+                        "ios": "1:468809539663:ios:9856c25fbdb7a468758a3a"
+                    }
+                }
+            }
+        }
+    }
+}

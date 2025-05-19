@@ -12,7 +12,20 @@
           "package_name": "teamcosmo.minichat"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "468809539663-smf874otc1c0ha152k0emo55qm78b20t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "teamcosmo.minichat",
+            "certificate_hash": "cb25061fedf851ae21e9abc81d276c79f3ecb5e1"
+          }
+        },
+        {
+          "client_id": "468809539663-7bmk989va61faihln3kkh889ta3kv351.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBme-JH-wxCB2Fck88nMZsfFhBfyeq4FAY"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468809539663-7bmk989va61faihln3kkh889ta3kv351.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "468809539663-2sgkjgr9ifngntq5lai0cvilb2529p1j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "teamcosmo.minichat"
+              }
+            }
+          ]
         }
       }
     }
