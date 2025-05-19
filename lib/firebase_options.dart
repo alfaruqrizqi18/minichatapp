@@ -59,12 +59,13 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyARUWPpQoZwdesm0F70v5Yl_VuCsNKbPTg',
-    appId: '1:468809539663:ios:9856c25fbdb7a468758a3a',
+    appId: '1:468809539663:ios:a49d475edd0f98d2758a3a',
     messagingSenderId: '468809539663',
     projectId: 'mini-chat-app-d5c27',
     storageBucket: 'mini-chat-app-d5c27.firebasestorage.app',
     androidClientId: '468809539663-smf874otc1c0ha152k0emo55qm78b20t.apps.googleusercontent.com',
-    iosClientId: '468809539663-jrpdlvu161j8vbre83a3ecpfjb0iercr.apps.googleusercontent.com',
-    iosBundleId: 'com.example.minichatapp',
+    iosClientId: '468809539663-9kcqqios1o3e27vgapbtp9aus6eo705f.apps.googleusercontent.com',
+    iosBundleId: 'teamcosmo.minichat',
   );
+
 }
