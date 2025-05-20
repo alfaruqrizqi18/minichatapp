@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../../../core/extensions/style_extension.dart';
+import '../../../core/utils/snackbar.dart';
 import '../../../core/utils/utils.dart';
 import '../../../core/widgets/app_bar/app_bar_v1.dart';
 import '../../../core/widgets/buttons/cosmo_filled_button.dart';
@@ -31,7 +32,9 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: generalPaddingHorizontal),
+        padding: const EdgeInsets.symmetric(
+          horizontal: generalPaddingHorizontal,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -62,7 +65,9 @@ class _SignInScreenState extends State<SignInScreen> {
             vSpace(screenHeight() * .02),
             Text(
               "Mini Chat App is a real-time chat application designed as a proof of concept to demonstrate technical capabilities, particularly in handling real-time data, user authentication, and building an intuitive user interface",
-              style: context.bodyMedium?.copyWith(color: context.onSurfaceColor),
+              style: context.bodyMedium?.copyWith(
+                color: context.onSurfaceColor,
+              ),
               textAlign: TextAlign.center,
             ),
             vSpace(screenHeight() * .06),
@@ -70,16 +75,29 @@ class _SignInScreenState extends State<SignInScreen> {
               width: screenWidth() * 0.7,
               child: CosmoFilledButton(
                 onPressed: () async {
-                  final request = await context.read<AppAuthProvider>().signIn();
+                  final request =
+                      await context.read<AppAuthProvider>().signIn();
                   if (request.success) {
                     if (!context.mounted) return;
                     context.router.replaceAll([LandingRoute()]);
+                    snackBar(
+                      text: "Logged in successfully",
+                      type: SnackBarType.success,
+                    );
+                  } else {
+                    snackBar(
+                      text: request.error,
+                      type: SnackBarType.error,
+                    );
                   }
                 },
                 buttonColor: context.surfaceColor,
                 title: "Sign in with Google",
                 textColor: context.onSurfaceColor,
-                icon: CosmoAssetImage(path: Assets.icons.google.path, width: 25),
+                icon: CosmoAssetImage(
+                  path: Assets.icons.google.path,
+                  width: 25,
+                ),
               ),
             ),
           ],
