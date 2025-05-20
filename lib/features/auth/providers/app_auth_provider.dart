@@ -19,7 +19,7 @@ class AppAuthProvider extends ChangeNotifier {
       AppRepository.setPhotoUrl(photoUrl: currentUser?.photoURL ?? "");
       return ResponseState(success: true);
     } else {
-      return ResponseState(success: false);
+      return ResponseState(success: false, data: request.error);
     }
   }
 
