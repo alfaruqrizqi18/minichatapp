@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../extensions/style_extension.dart';
-import '../cards/cosmo_filled_card.dart';
 
 class CosmoTextFormFieldWithLabelInside extends StatelessWidget {
   final bool obscureText;
@@ -44,7 +43,6 @@ class CosmoTextFormFieldWithLabelInside extends StatelessWidget {
   final FocusNode? focusNode;
   final bool autofocus;
   final TextAlign textAlign;
-  final double cardRadius;
 
   const CosmoTextFormFieldWithLabelInside({
     super.key,
@@ -87,71 +85,67 @@ class CosmoTextFormFieldWithLabelInside extends StatelessWidget {
     this.focusNode,
     this.textAlign = TextAlign.left,
     this.floatingLabelBehavior = FloatingLabelBehavior.auto,
-    this.cardRadius = 12,
   });
 
   @override
   Widget build(BuildContext context) {
-    return CosmoFilledCard(
-      borderRadius: cardRadius,
-      child: TextFormField(
-        textAlignVertical: TextAlignVertical.center,
-        readOnly: readOnly,
-        autofocus: autofocus,
-        obscureText: obscureText,
-        enableSuggestions: enableSuggestions,
-        autocorrect: autocorrect,
-        enabled: enabled,
-        controller: controller,
-        textInputAction: textInputAction,
-        keyboardType: keyboardType,
-        cursorColor: context.primaryColor,
-        cursorWidth: 1,
-        focusNode: focusNode,
-        autofillHints: autofillHints,
-        onEditingComplete: onEditingComplete,
-        validator: validator,
-        onChanged: onChanged,
-        onFieldSubmitted: onFieldSubmitted,
-        textCapitalization: textCapitalization,
-        maxLines: maxLines,
-        minLines: minLines,
-        maxLength: maxLength,
-        textAlign: textAlign,
-        maxLengthEnforcement: maxLengthEnforced,
-        onTap: () {
-          if (onTap != null) {
-            onTap!();
-          }
-        },
-        style: context.bodyMedium?.copyWith(color: context.onSurfaceColor),
-        inputFormatters: inputFormatters ?? [],
-        decoration: InputDecoration(
-          isDense: isDense,
-          hintText: hintText,
-          labelText: labelText,
-          errorText: errorText,
-          helperText: helperText,
-          prefixText: prefixText,
-          prefixIcon: prefixIcon,
-          suffixIcon: suffixIcon,
-          fillColor: fillColor,
-          filled: isFilled,
-          floatingLabelBehavior: floatingLabelBehavior,
-          suffixIconColor: context.onSurfaceVariantColor,
-          prefixIconColor: context.onSurfaceVariantColor,
-          border: InputBorder.none,
-          errorStyle: context.bodySmall?.copyWith(color: context.errorColor),
-          errorMaxLines: errorMaxLines,
-          helperStyle: context.bodySmall?.copyWith(
-            color: context.onSurfaceVariantColor,
-          ),
-          hintStyle: context.bodyMedium?.copyWith(
-            color: context.onSurfaceVariantColor.withValues(alpha: 0.5),
-          ),
-          prefixStyle: context.bodyMedium?.copyWith(
-            color: context.onSurfaceColor.withValues(alpha: 0.5),
-          ),
+    return TextFormField(
+      textAlignVertical: TextAlignVertical.center,
+      readOnly: readOnly,
+      autofocus: autofocus,
+      obscureText: obscureText,
+      enableSuggestions: enableSuggestions,
+      autocorrect: autocorrect,
+      enabled: enabled,
+      controller: controller,
+      textInputAction: textInputAction,
+      keyboardType: keyboardType,
+      cursorColor: context.primaryColor,
+      cursorWidth: 1,
+      focusNode: focusNode,
+      autofillHints: autofillHints,
+      onEditingComplete: onEditingComplete,
+      validator: validator,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
+      textCapitalization: textCapitalization,
+      maxLines: maxLines,
+      minLines: minLines,
+      maxLength: maxLength,
+      textAlign: textAlign,
+      maxLengthEnforcement: maxLengthEnforced,
+      onTap: () {
+        if (onTap != null) {
+          onTap!();
+        }
+      },
+      style: context.bodyMedium?.copyWith(color: context.onSurfaceColor),
+      inputFormatters: inputFormatters ?? [],
+      decoration: InputDecoration(
+        isDense: isDense,
+        hintText: hintText,
+        labelText: labelText,
+        errorText: errorText,
+        helperText: helperText,
+        prefixText: prefixText,
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        fillColor: fillColor,
+        filled: isFilled,
+        floatingLabelBehavior: floatingLabelBehavior,
+        suffixIconColor: context.onSurfaceVariantColor,
+        prefixIconColor: context.onSurfaceVariantColor,
+        border: InputBorder.none,
+        errorStyle: context.bodySmall?.copyWith(color: context.errorColor),
+        errorMaxLines: errorMaxLines,
+        helperStyle: context.bodySmall?.copyWith(
+          color: context.onSurfaceVariantColor,
+        ),
+        hintStyle: context.bodyMedium?.copyWith(
+          color: context.onSurfaceVariantColor.withValues(alpha: 0.5),
+        ),
+        prefixStyle: context.bodyMedium?.copyWith(
+          color: context.onSurfaceColor.withValues(alpha: 0.5),
         ),
       ),
     );
