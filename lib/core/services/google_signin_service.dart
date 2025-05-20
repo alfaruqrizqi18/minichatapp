@@ -27,7 +27,7 @@ class GoogleSignInService {
       if (idToken == null || idToken.isEmpty) {
         return ResponseState(data: "Unable to retrieve token");
       } else {
-        return ResponseState(success: true, data: idToken);
+        return ResponseState(success: true);
       }
     } catch (e, s) {
       printLog('signInGoogle error: $e, stacktrace: $s', isError: true);
