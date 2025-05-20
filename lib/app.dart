@@ -41,7 +41,7 @@ class _CosmoAppState extends State<CosmoApp> {
             return MediaQuery(
               data: MediaQuery.of(
                 context,
-              ).copyWith(textScaler: const TextScaler.linear(1.05)),
+              ).copyWith(textScaler: const TextScaler.linear(0.95)),
               child: child!,
             );
           },
