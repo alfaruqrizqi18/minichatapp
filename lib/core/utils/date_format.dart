@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 
 class CosmoDateFormat {
-  static String withTime(DateTime? dateTime) {
+  static String dateWithTime(DateTime? dateTime) {
     return DateFormat('dd MMM yyyy - HH:mm').format(dateTime ?? DateTime.now());
   }
 
@@ -11,5 +11,9 @@ class CosmoDateFormat {
 
   static String onlyTime(DateTime? dateTime) {
     return DateFormat('HH:mm').format(dateTime ?? DateTime.now());
+  }
+
+  static String basedOnFormat(DateTime? dateTime, {required String format}) {
+    return DateFormat(format).format(dateTime ?? DateTime.now());
   }
 }
