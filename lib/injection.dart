@@ -16,3 +16,7 @@ class AppInjections {
     injection.registerSingleton<FirebaseFirestore>(FirebaseFirestore.instance);
   }
 }
+
+T getInjection<T extends Object>() {
+  return GetIt.instance.get<T>();
+}
