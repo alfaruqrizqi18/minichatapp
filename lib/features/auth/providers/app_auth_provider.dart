@@ -12,9 +12,11 @@ class AppAuthProvider extends ChangeNotifier {
       AppRepository.setLoggedIn(loggedIn: true);
 
       // set current user
-      AppRepository.setCurrentUser(
-        user: GoogleSignInService().getLoggedInAccount(),
-      );
+      final currentUser = GoogleSignInService().getLoggedInAccount();
+      AppRepository.setEmail(email: currentUser?.email ?? "");
+      AppRepository.setName(name: currentUser?.displayName ?? "");
+      AppRepository.setUID(uid: currentUser?.uid ?? "");
+      AppRepository.setPhotoUrl(photoUrl: currentUser?.photoURL ?? "");
       return ResponseState(success: true);
     } else {
       return ResponseState(success: false);
