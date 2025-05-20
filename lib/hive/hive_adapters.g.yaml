@@ -5,11 +5,17 @@ nextTypeId: 1
 types:
   AppModel:
     typeId: 0
-    nextIndex: 3
+    nextIndex: 7
     fields:
       isDarkMode:
         index: 0
       isLoggedIn:
         index: 1
-      currentUser:
-        index: 2
+      email:
+        index: 3
+      name:
+        index: 4
+      uid:
+        index: 5
+      photoUrl:
+        index: 6

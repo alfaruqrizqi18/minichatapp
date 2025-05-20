@@ -19,20 +19,29 @@ class AppModelAdapter extends TypeAdapter<AppModel> {
     return AppModel(
       isDarkMode: fields[0] == null ? false : fields[0] as bool,
       isLoggedIn: fields[1] == null ? false : fields[1] as bool,
-      currentUser: fields[2] as User?,
+      email: fields[3] == null ? "" : fields[3] as String,
+      name: fields[4] == null ? "" : fields[4] as String,
+      uid: fields[5] == null ? "" : fields[5] as String,
+      photoUrl: fields[6] == null ? "" : fields[6] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, AppModel obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.isDarkMode)
       ..writeByte(1)
       ..write(obj.isLoggedIn)
-      ..writeByte(2)
-      ..write(obj.currentUser);
+      ..writeByte(3)
+      ..write(obj.email)
+      ..writeByte(4)
+      ..write(obj.name)
+      ..writeByte(5)
+      ..write(obj.uid)
+      ..writeByte(6)
+      ..write(obj.photoUrl);
   }
 
   @override
