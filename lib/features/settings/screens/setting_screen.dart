@@ -12,6 +12,8 @@ import '../../../core/utils/utils.dart';
 import '../../../core/widgets/app_bar/app_bar_v1.dart';
 import '../../../core/widgets/buttons/cosmo_filled_button.dart';
 import '../../../core/widgets/buttons/cosmo_text_button.dart';
+import '../../../core/widgets/cards/cosmo_filled_card.dart';
+import '../../../core/widgets/images/cosmo_network_image.dart';
 import '../../../routes/app_routing.gr.dart';
 import '../../auth/providers/app_auth_provider.dart';
 
@@ -51,6 +53,40 @@ class _SettingScreenState extends State<SettingScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Container(
+              alignment: Alignment.center,
+              child: CosmoFilledCard(
+                child: Container(
+                  padding: EdgeInsets.all(25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        constraints: BoxConstraints(maxWidth: screenWidth() * 0.8),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(100),
+                          child: CosmoNetworkImage(AppRepository.getPhotoUrl()),
+                        ),
+                      ),
+                      vSpace(15),
+                      Text(
+                        AppRepository.getName(),
+                        textAlign: TextAlign.center,
+                        style: context.bodyLarge,
+                      ),
+                      Text(
+                        AppRepository.getEmail(),
+                        textAlign: TextAlign.center,
+                        style: context.bodyMedium?.copyWith(
+                          color: context.outlineColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
             Text(
               "Misc",
               style: context.titleLarge?.copyWith(
@@ -96,7 +132,7 @@ class _SettingScreenState extends State<SettingScreen> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Are you sure want to logout?", style: context.titleMedium),
+              Text("Are you sure want to logout?", style: context.bodyLarge),
               vSpace(10),
             ],
           ),
