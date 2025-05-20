@@ -13,6 +13,13 @@ class AppRouter extends RootStackRouter {
       initial: true,
     ),
     CustomRoute(page: SignInRoute.page, transitionsBuilder: transition),
-    CustomRoute(page: LandingRoute.page, transitionsBuilder: transition),
+    CustomRoute(
+      page: LandingRoute.page,
+      transitionsBuilder: transition,
+      children: [
+        CustomRoute(page: ChatRoute.page, transitionsBuilder: transition),
+        CustomRoute(page: SettingRoute.page, transitionsBuilder: transition),
+      ],
+    ),
   ];
 }
