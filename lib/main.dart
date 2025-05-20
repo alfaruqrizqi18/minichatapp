@@ -8,6 +8,7 @@ import 'app.dart';
 import 'core/services/hive_service.dart';
 import 'core/utils/print_log.dart';
 import 'features/auth/providers/app_auth_provider.dart';
+import 'features/chats/providers/chat_provider.dart';
 import 'firebase_options.dart';
 import 'injection.dart';
 
@@ -29,8 +30,9 @@ void main() {
         MultiProvider(
           providers: [
             ChangeNotifierProvider(
-              create: (_) => AppInjections().injection.get<AppAuthProvider>(),
+              create: (_) => getInjection<AppAuthProvider>(),
             ),
+            ChangeNotifierProvider(create: (_) => getInjection<ChatProvider>()),
           ],
           child: CosmoApp(),
         ),
