@@ -25,8 +25,7 @@ class ChatListWidget extends StatelessWidget {
         },
         child: StreamBuilder(
           stream:
-              AppInjections().injection
-                  .get<FirebaseFirestore>()
+              getInjection<FirebaseFirestore>()
                   .collection('chats')
                   .orderBy('createdAt', descending: true)
                   .snapshots(),
