@@ -1,16 +1,23 @@
-# minichatapp
+# Mini Chat App
 
-A new Flutter project.
+Mini Chat App is a real-time chat application designed as a proof of concept to demonstrate technical capabilities, particularly in handling real-time data, user authentication, and building an intuitive user interface.
 
-## Getting Started
+### Purpose
 
-This project is a starting point for a Flutter application.
+This project is a created regards Technical Test in [Artkit Art](https://artkit.art)
 
-A few resources to get you started if this is your first Flutter project:
+This project is build using Flutter Framework. The stack I used is listed below : 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Provider
+2. Cloud Firestore
+3. Google Sign in (Firebase Auth)
+4. Hive CE
+5. Auto Route
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### App Demo
+
+Can check the app demo here : [App Demo at Google Drive](https://drive.google.com/file/d/1-z7O1nbSQ6yZe8pTv_pdk35tGNzYbr_a/view?usp=drive_link)
+
+### APK
+
+Download APK here : [minichat.apk](https://github.com/alfaruqrizqi18/minichatapp/blob/master/apk/app-release.apk)
