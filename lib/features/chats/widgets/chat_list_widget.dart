@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/injection.dart';
 import '../../../core/widgets/cosmo_adaptive_progress_indicator.dart';
-import '../../../injection.dart';
 import '../models/chat_model.dart';
 import 'chat_bubble_widget.dart';
 

@@ -2,12 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
-import 'core/repositories/app_repository.dart';
-import 'core/services/hive_service.dart';
-import 'core/theme/color_schemes.dart';
-import 'core/theme/text_theme.dart';
+import '../routes/app_routing.dart';
 import 'injection.dart';
-import 'routes/app_routing.dart';
+import 'repositories/app_repository.dart';
+import 'services/hive_service.dart';
+import 'theme/color_schemes.dart';
+import 'theme/text_theme.dart';
 
 class CosmoApp extends StatefulWidget {
   const CosmoApp({super.key});

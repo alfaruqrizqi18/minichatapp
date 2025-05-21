@@ -4,13 +4,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'app.dart';
+import 'core/app.dart';
+import 'core/injection.dart';
 import 'core/services/hive_service.dart';
 import 'core/utils/print_log.dart';
 import 'features/auth/providers/app_auth_provider.dart';
 import 'features/chats/providers/chat_provider.dart';
 import 'firebase_options.dart';
-import 'injection.dart';
 
 void main() {
   runZonedGuarded(

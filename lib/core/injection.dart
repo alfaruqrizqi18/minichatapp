@@ -2,9 +2,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get_it/get_it.dart';
 
-import 'features/auth/providers/app_auth_provider.dart';
-import 'features/chats/providers/chat_provider.dart';
-import 'routes/app_routing.dart';
+import '../features/auth/providers/app_auth_provider.dart';
+import '../features/chats/providers/chat_provider.dart';
+import '../routes/app_routing.dart';
 
 class AppInjections {
   final injection = GetIt.instance;

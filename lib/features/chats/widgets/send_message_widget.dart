@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/extensions/style_extension.dart';
+import '../../../core/injection.dart';
 import '../../../core/widgets/cards/cosmo_outined_card.dart';
 import '../../../core/widgets/text_fields/cosmo_text_form_field.dart';
-import '../../../injection.dart';
 import '../providers/chat_provider.dart';
 
 class SendMessageWidget extends StatelessWidget {

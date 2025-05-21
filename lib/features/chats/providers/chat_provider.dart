@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 
+import '../../../core/injection.dart';
 import '../../../core/repositories/app_repository.dart';
-import '../../../injection.dart';
 
 class ChatProvider extends ChangeNotifier {
   void sendMessage({required String message}) {
