@@ -17,7 +17,7 @@ class CosmoApp extends StatefulWidget {
 }
 
 class _CosmoAppState extends State<CosmoApp> {
-  final _appRouter = AppInjections().injection<AppRouter>();
+  final _appRouter = getInjection<AppRouter>();
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(

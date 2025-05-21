@@ -6,7 +6,7 @@ import '../../../injection.dart';
 
 class ChatProvider extends ChangeNotifier {
   void sendMessage({required String message}) {
-    final firestore = AppInjections().injection.get<FirebaseFirestore>();
+    final firestore = getInjection<FirebaseFirestore>();
     firestore.collection('chats').add({
       'text': message,
       'createdAt': Timestamp.now(),
