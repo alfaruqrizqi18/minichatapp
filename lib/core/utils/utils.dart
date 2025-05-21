@@ -16,14 +16,3 @@ Widget hSpace(double val) {
 double screenWidth() => MediaQuery.of(globalCurrentContext).size.width;
 double screenHeight() => MediaQuery.of(globalCurrentContext).size.height;
 Size screenSize() => MediaQuery.of(globalCurrentContext).size;
-
-
-String getLanguageFromLangCode(String lang) {
-  if (lang == "en") {
-    return "English";
-  } else if (lang == "id") {
-    return "Indonesia";
-  } else {
-    return "";
-  }
-}
